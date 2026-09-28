@@ -1,0 +1,88 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #FFF8F0;
+}
+
+/*Encabezado*/
+header ,.navbar {
+    background-color: #5B8C6F;
+}
+
+.navbar .navbar-brand, .navbar .nav-link.active{
+    color: #ffffff;
+    font-family:'Poppins', sans-serif;
+    letter-spacing: -0.5px;
+}
+.navbar .nav-link.active{
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.navbar .nav-link.active:hover {
+    color: #d1e7dd;
+}
+
+
+main{
+    margin-bottom: 8px;
+}
+
+/*Galeria de fotos*/
+.container h2{
+    margin-top: 8px;
+}
+
+.card-body a{
+    background-color: #D9825B;
+    border-color: #333333;
+}
+
+.card-body a:hover{
+    background-color: #5B8C6F;
+}
+
+img{
+    min-width: 160px;
+    min-height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .badge {
+    align-self: flex-end;
+}
+
+.card-body .btn {
+    align-self: flex-end;
+}
+
+
+
+
+
+
+
+/*Pie de pagina*/
+footer {
+    background-color: #5B8C6F;
+    padding: 20px;
+}
+
+footer h5{
+    color: #ffffff;
+    font-family:'Poppins', sans-serif;
+    letter-spacing: -0.5px;
+}
+
+footer p{
+    color: #333333;
+    font-family:'Open sans', sans-serif; 
+}

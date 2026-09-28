@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilo_formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+<body>
+    <!--Encabezado-->   
+    <header>
+        <!--Navegador-->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../html/index.html">Fundación Huellas del Puerto</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../html/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="../html/galeria.html">Mascotas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="../html/formulario.html">¡Adopta!</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="mb-3">
+                <h1>Formulario de Adopción</h1>
+                <p >Completa los campos para postular a la adopción de una mascota.</p>
+            </div>
+            <form action="#" method="POST" class="card p-4 ">
+                <div class="row g-3">
+                    
+                    <!-- Correo electrónico -->
+                    <div class="col-12 col-md-6">
+                        <label for="correo" class="form-label ">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@gmail.com" required>
+                    </div>
+
+                    <!-- Nombre completo -->
+                    <div class="col-12 col-md-6">
+                        <label for="nombre" class="form-label ">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan Pedro Monte Rey" required>
+                    </div>
+
+                    <!-- Edad -->
+                    <div class="col-12 col-md-6">
+                        <label for="edad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" id="edad" name="edad" placeholder="24" min="18" required>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="col-12 col-md-6">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required>
+                    </div>
+
+                    <!-- Selección de Mascota -->
+                    <div class="col-12 col-md-6">
+                        <label for="mascota" class="form-label">Mascota a Adoptar</label>
+                        <select class="form-select" id="mascota" name="mascota" required>
+                            <option value="" selected disabled>Selecciona una mascota...</option>
+                            <option value="khalid">Khalid Kashmiri</option>
+                            <option value="yoshi">Yoshi</option>
+                            <option value="tom">Tom</option>
+                        </select>
+                    </div>
+
+                    <!-- Tipo de vivienda -->
+                    <div class="col-12 col-md-6">
+                        <label for="vivienda" class="form-label">Tipo de Vivienda</label>
+                        <select class="form-select" id="vivienda" name="vivienda" required>
+                            <option value="" selected disabled>Selecciona tipo de vivienda...</option>
+                            <option value="casa">Casa</option>
+                            <option value="departamento">Departamento</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- ¿Tiene mascotas? -->
+                    <div class="col-12">
+                        <label class="form-label">¿Tiene otras mascotas actualmente?</label>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="tieneMascotas" id="mascotaSi" value="si" required>
+                            <label class="form-check-label" for="mascotaSi">Sí</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tieneMascotas" id="mascotaNo" value="no" checked required>
+                            <label class="form-check-label" for="mascotaNo">No</label>
+                        </div>
+                    </div>
+
+                    <!-- Motivo -->
+                    <div class="col-12">
+                        <label for="motivo" class="form-label ">Motivo de adopción o comentario adicional *</label>
+                        <textarea class="form-control" id="motivo" name="motivo" rows="4" placeholder="Cuéntanos brevemente por qué deseas adoptar..." required></textarea>
+                    </div>
+
+                    <!--Aceptacion-->
+                    <div class="col-12">
+                        <input class="form-check-input" type="checkbox" name="acepto" id="acepto"  checked required>
+                        <label class="form-check-label" for="acepto">Acepto el compromiso de tener responsabilidad de la mascota</label>
+                    </div>
+
+
+                    <!-- Botones -->
+                    <div class="col-12">
+                        <button type="reset" class="btn btn-outline-secondary ">Limpiar</button>
+                        <button type="submit" class="btn btn-primary ">Enviar Solicitud</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+
+    <!--pie de pagina-->
+    <footer>
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-12 col-md-3">
+                    <h5>Fundación Huellas del Puerto</h5>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h5>Ubicacion</h5>
+                    <p >
+                        Av. Valparaíso #1234, Puerto Central, Chile.
+                    </p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h5>Contacto</h5>
+                    <p>
+                        contacto@huellasdelpuerto.cl
+                        <br>
+                        +56 9 8765 4321
+                    </p>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h5>Hora de visita</h5>
+                    <p>
+                        Lunes a Sábado: 10:00 - 18:00 hrs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
